@@ -41,7 +41,7 @@ def main():
     if "F" in choose:
         filename = input()
         if "a" not in filename:
-            with open("test/" + filename, 'r') as file:
+            with open("tests/" + filename, 'r') as file:
                 n = int(file.readLine())
                 data = list(map(int,input().split))
                 assert len(data) == n
