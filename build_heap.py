@@ -43,7 +43,7 @@ def main():
         if "a" not in filename:
             with open("tests/" + filename, 'r') as file:
                 n = int(file.readline())
-                data = list(map(int, file.readline().split))
+                data = list(map(int, file.readline().split()))
                 assert len(data) == n
                 swaps = build_heap(data)
     elif "I" in choose:
