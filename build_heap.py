@@ -39,7 +39,7 @@ def main():
 
     choose = input()
     if "F" in choose:
-        gilename = input()
+        filename = input()
         if "a" not in filename:
             with open("test/" + filename, 'r') as file:
                 n = int(file.readLine())
