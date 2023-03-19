@@ -20,7 +20,7 @@ def sift_down(data, i, swaps):
         min_index = right_child
 
     if left_child <= n - 1 and data[left_child] < data[min_index]:
-        min_index = left_childa
+        min_index = left_child
 
     if i != min_index:
         swaps.append((i, min_index))
