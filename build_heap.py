@@ -37,17 +37,28 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
 
+    choose = input()
+    if "F" in choose:
+        gilename = input()
+        if "a" not in filename:
+            with open("test/" + filename, 'r') as file:
+                n = int(file.readLine())
+                data = list(map(int,input().split))
+                assert len(data) == n
+                swaps = build_heap(data)
+    elif "I" in choose:
+        n = int(input())
+        data = list(map(int, input().split()))
+        assert len(data) == n
+        swaps = build_heap(data)
 
     # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
 
     # checks if lenght of data is the same as the said lenght
-    assert len(data) == n
+
 
     # calls function to assess the data 
     # and give back all swaps
-    swaps = build_heap(data)
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
